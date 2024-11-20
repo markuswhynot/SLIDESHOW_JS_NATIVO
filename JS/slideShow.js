@@ -78,4 +78,20 @@ function showSlide(slideNum){
 
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
+
+    //Automaticamente la llamada a la función usando la funcion built in
+
+    
+
+    //Iniciamos el funcionamento automático del slide show.
+    function startAutoSlide(){
+        autoslide = setInterval(function(){nextPrevSlide(1);}, 3000);
+    }
+
+    //Detiene el funcionamiento del autoslide
+    function stopAutoslide() {
+        clearInterval(autoslide);
+    }
+
+    //setInterval(nextPrevSlide, 3000);
 }
